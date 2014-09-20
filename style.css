@@ -1,0 +1,18 @@
+.message-wrapper {
+    max-width: 100%;
+    height: 40px;
+    text-align: right;
+}
+
+.message {
+    /*white-space: nowrap;*/
+    /*-webkit-animation: rightThenLeft 40s linear;*/
+    /*right: 0;*/
+    font-size: 2em;
+    float: left;
+}
+
+@-webkit-keyframes bottomUp {
+    0%   {margin-top:100%;}
+    100% {margin-top:-100%;}
+}

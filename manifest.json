@@ -1,0 +1,13 @@
+{
+    "name": "Twicker",
+    "description": "Twicker - a twitter newspicker.",
+    "version": "0.1",
+    "manifest_version": 2,
+    "app": {
+        "background": {
+            "scripts": ["messageViewer.js", "message.js", "bar.js", "background.js"]
+        }
+    },
+    "permissions": ["alwaysOnTopWindows"],
+    "icons": { "16": "calculator-16.png", "128": "calculator-128.png" }
+}

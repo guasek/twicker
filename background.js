@@ -1,0 +1,1 @@
+chrome.app.runtime.onLaunched.addListener(newsBar.createBar);
