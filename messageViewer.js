@@ -1,5 +1,8 @@
 var messageViewer = (function () {
 
+    const messageDisplayTime = 10000;
+    const messageMeanTime = 1000;
+
     var createViewer = function () {
         var messageWrapper = document.querySelector('#message-wrapper');
         var messageQueue = [];
@@ -11,11 +14,11 @@ var messageViewer = (function () {
         var viewNext = function() {
             var message = messageQueue.pop();
             if (typeof message === "undefined") {
-                setTimeout(viewNext, 1000);
+                setTimeout(viewNext, messageMeanTime);
                 return;
             }
             message.displayOn(messageWrapper);
-            message.deleteAfterAnd(2000, viewNext);
+            message.deleteAfterAnd(messageDisplayTime, viewNext);
         }
 
         var startViewing = function() {
@@ -32,3 +35,5 @@ var messageViewer = (function () {
         createViewer: createViewer
     };
 }());
+
+module.exports = messageViewer;

@@ -5,9 +5,9 @@
     "manifest_version": 2,
     "app": {
         "background": {
-            "scripts": ["messageViewer.js", "message.js", "bar.js", "background.js"]
+            "scripts": ["background.js", "bar.js"]
         }
     },
-    "permissions": ["alwaysOnTopWindows"],
+    "permissions": ["alwaysOnTopWindows", "https://userstream.twitter.com/*", "https://api.twitter.com/*", "identity"],
     "icons": { "16": "calculator-16.png", "128": "calculator-128.png" }
 }
