@@ -8,8 +8,8 @@ var messageFetcher = (function () {
         var twitterStream = new Stream({
             "consumer_key": "hxAbNDTGRKYeuas4JkmbS8rRV",
             "consumer_secret": "I2ngmBWkPiAC7w3hEgyQRUzkoRpMG1AM6xZIV0LWCJGbZNtbvG",
-            "access_token_key": "713921370-YFYQdCLL4XQeG4SDPromGaIFnTVY8ZM0jMytVi6B",
-            "access_token_secret": "NyodbrLpPHGY1JAkLZhZdcl1bFo6z1J81hRTKZAEGZqAu"
+            "access_token_key": "713921370-4rwudTcq3Ed3l3X7o1jGt0Ao5fszv7WamkILrBfx",
+            "access_token_secret": "AnLm5nZAp6W0lJFfF3iFcHwtAU6eM9DUitqCqEti1LH59"
         });
 
 
