@@ -1,21 +1,19 @@
 var messages = (function () {
 
-    var TYPE_TWEET = 1;
-
     var prepareMessageText = function(messageText) {
         var carriageRemoved = messageText.replace(/[\n\r]/g, ' ');
         return carriageRemoved;
     }
 
-    var message = function(messageType, messageContent) {
-        var messageType = messageType;
+    var message = function(author, messageContent) {
+        var author = author;
         var messageContent = prepareMessageText(messageContent);
 
         var messageNode = document.createElement('span');
         messageNode.setAttribute('class', 'message animated fadeInUp');
 
         var displayOn = function(messageWrapper) {
-            messageNode.innerText = messageContent;
+            messageNode.innerText = author + ": " + messageContent;
             messageWrapper.appendChild(messageNode);
         }
 
@@ -39,7 +37,7 @@ var messages = (function () {
         if (typeof messageObject.text === "undefined") {
             return;
         }
-        return message(TYPE_TWEET, messageObject.text);
+        return message(messageObject.user.name, messageObject.text);
     };
 
     return {

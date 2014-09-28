@@ -21,6 +21,11 @@ var messageFetcher = (function () {
             }
             twitterStream.stream();
             twitterStream.on('data', extractMessageContent);
+
+            OAuth.initialize('5RuSK2Ve-p0purYBZuaAcNqyusk');
+            OAuth.chrome_app('twitter', {}, function(oAuthToken, oAuthTokenSecret) {
+
+            });
         }
 
         var startFetching = function(display) {

@@ -16,7 +16,11 @@
         "https://api.twitter.com/oauth/authorize",
         "https://api.twitter.com/oauth/request_token",
         "https://api.twitter.com/oauth/access_token",
-        "identity"
+        "https://oauth.io/auth/",
+        "identity",
+        "webview",
+        "https://google.com/*",
+        "https://nljnhhhpfjakmgehjhifghpkmeomjhgh.chromiumapp.org/*"
     ],
     "icons": { "16": "calculator-16.png", "128": "calculator-128.png" }
 }
