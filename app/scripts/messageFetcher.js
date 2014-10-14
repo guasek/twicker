@@ -16,7 +16,7 @@ var messageFetcher = (function () {
             OAuth.chrome_app('twitter', {}, function(oAuthToken, oAuthTokenSecret) {
                 var twitterStream = new Stream({
                     "consumer_key": "hxAbNDTGRKYeuas4JkmbS8rRV",
-                    "consumer_secret": "",
+                    "consumer_secret": "I2ngmBWkPiAC7w3hEgyQRUzkoRpMG1AM6xZIV0LWCJGbZNtbvG",
                     "access_token_key": oAuthToken,
                     "access_token_secret": oAuthTokenSecret
                 });

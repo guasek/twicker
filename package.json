@@ -1,0 +1,28 @@
+{
+    "name": "twicker",
+    "version": "0.0.1",
+    "description": "Twitter news ticker - chrome app",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/guasek/twicker"
+    },
+    "keywords": [
+        "twitter",
+        "twicker",
+        "chrome",
+        "news",
+        "news-ticker"
+    ],
+    "dependencies": {
+        "user-stream": "0.0.7"
+    },
+    "devDependencies": {
+        "browserify": "git+https://github.com/guasek/node-browserify.git"
+    },
+    "author": {
+        "name": "Paweł Głasek",
+        "email": "guasek@gmail.com",
+        "url": "https://github.com/guasek"
+    },
+    "license": "MIT"
+}
