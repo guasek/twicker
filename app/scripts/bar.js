@@ -8,14 +8,14 @@ var newsBar = (function () {
 
     var displayMessage = function(message) {
         viewer.viewMessage(message);
-    }
+    };
 
     var init = function() {
         viewer = messageViewer.createViewer();
         viewer.startViewing();
         fetcher = messageFetcher.createFetcher();
         fetcher.startFetching(viewer.viewMessage);
-    }
+    };
 
     return {
         displayMessage: displayMessage,

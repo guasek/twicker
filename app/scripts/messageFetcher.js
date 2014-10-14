@@ -10,7 +10,7 @@ var messageFetcher = (function () {
                 console.log(message);
                 var tweet = messages.createTweet(message);
                 displayMessage(tweet);
-            }
+            };
 
             OAuth.initialize('5RuSK2Ve-p0purYBZuaAcNqyusk');
             OAuth.chrome_app('twitter', {}, function(oAuthToken, oAuthTokenSecret) {
@@ -24,17 +24,16 @@ var messageFetcher = (function () {
                 twitterStream.stream();
                 twitterStream.on('data', extractMessageContent);
             });
-        }
+        };
 
         var startFetching = function(display) {
             fetchFromTwitterAnd(display);
-        }
-
+        };
 
         return {
             startFetching: startFetching
         };
-    }
+    };
 
     return {
         createFetcher: createFetcher
