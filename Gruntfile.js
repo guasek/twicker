@@ -21,22 +21,35 @@ module.exports = function (grunt) {
                 'Gruntfile.js',
                 'app/scripts/{,*/}*.js'
             ]
+        },
+
+        browserify: {
+            vendor: {
+                src: ['app/lib/jquery/dist/jquery.min.js', 'app/lib/oauth-js/dist/oauth.min.js'],
+                dest: 'build/vendor.js'
+            },
+            app: {
+                src: ['app/scripts/**/*.js'],
+                dest: 'build/app.js'
+            }
+        },
+
+        concat: {
+            'build/twicker.js': ['build/vendor.js', 'build/app.js']
         }
     });
 
-    grunt.registerTask('init', [
-        //TODO: Download bower components.
+    grunt.registerTask('build', [
+        'jshint',
+        'browserify',
+        'concat'
     ]);
 
-    grunt.registerTask('build', [
-        //TODO: Generate application file.
-    ])
-
     grunt.registerTask('watch', [
-        //TODO: Browserify
+        //TODO: Watchify
     ]);
 
     grunt.registerTask('default', [
-        'watch'
+        'build'
     ]);
 };

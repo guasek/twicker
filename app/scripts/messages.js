@@ -1,3 +1,5 @@
+'use strict';
+
 var messages = (function () {
 
     var prepareMessageText = function(messageText) {
@@ -5,15 +7,15 @@ var messages = (function () {
         return carriageRemoved;
     };
 
-    var message = function(an_author, a_messageContent) {
-        var author = an_author;
-        var messageContent = prepareMessageText(a_messageContent);
+    var message = function(anAuthor, aMessageContent) {
+        var author = anAuthor;
+        var messageContent = prepareMessageText(aMessageContent);
 
         var messageNode = document.createElement('span');
         messageNode.setAttribute('class', 'message animated fadeInUp');
 
         var displayOn = function(messageWrapper) {
-            messageNode.innerText = author + ": " + messageContent;
+            messageNode.innerText = author + ': ' + messageContent;
             messageWrapper.appendChild(messageNode);
         };
 
@@ -34,7 +36,7 @@ var messages = (function () {
     };
 
     var createTweet = function(messageObject){
-        if (typeof messageObject.text === "undefined") {
+        if (typeof messageObject.text === 'undefined') {
             return;
         }
         return message(messageObject.user.name, messageObject.text);

@@ -1,3 +1,6 @@
+'use strict';
+/* global chrome */
+
 chrome.app.runtime.onLaunched.addListener(function () {
     //TODO: Wyjąć na zewnątrz konfigurację twittera.
     var barWindow;

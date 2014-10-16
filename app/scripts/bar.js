@@ -1,3 +1,5 @@
+'use strict';
+
 var messageViewer = require('./messageViewer');
 var messageFetcher = require('./messageFetcher');
 

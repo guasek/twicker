@@ -18,7 +18,15 @@
   },
   "devDependencies": {
     "browserify": "git+https://github.com/guasek/node-browserify.git",
-    "jshint": "~2.5.6"
+    "jshint-stylish": "~1.0.0",
+    "grunt": "~0.4.5",
+    "time-grunt": "~1.0.0",
+    "load-grunt-tasks": "~0.6.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-browserify": "~3.0.1",
+    "grunt-contrib-concat": "~0.5.0"
   },
   "author": {
     "name": "Paweł Głasek",
