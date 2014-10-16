@@ -1,3 +1,5 @@
+'use strict';
+
 var messageViewer = (function () {
 
     var messageDisplayTime = 10000;
@@ -13,7 +15,7 @@ var messageViewer = (function () {
 
         var viewNext = function() {
             var message = messageQueue.pop();
-            if (typeof message === "undefined") {
+            if (typeof message === 'undefined') {
                 setTimeout(viewNext, messageMeanTime);
                 return;
             }

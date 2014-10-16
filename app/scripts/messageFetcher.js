@@ -1,3 +1,6 @@
+'use strict';
+/* global OAuth */
+
 var messages = require('./messages');
 var Stream = require('user-stream');
 
@@ -13,12 +16,12 @@ var messageFetcher = (function () {
             };
 
             OAuth.initialize('5RuSK2Ve-p0purYBZuaAcNqyusk');
-            OAuth.chrome_app('twitter', {}, function(oAuthToken, oAuthTokenSecret) {
+            OAuth.chromeApp('twitter', {}, function(oAuthToken, oAuthTokenSecret) {
                 var twitterStream = new Stream({
-                    "consumer_key": "hxAbNDTGRKYeuas4JkmbS8rRV",
-                    "consumer_secret": "I2ngmBWkPiAC7w3hEgyQRUzkoRpMG1AM6xZIV0LWCJGbZNtbvG",
-                    "access_token_key": oAuthToken,
-                    "access_token_secret": oAuthTokenSecret
+                    'consumer_key': 'hxAbNDTGRKYeuas4JkmbS8rRV',
+                    'consumer_secret': 'I2ngmBWkPiAC7w3hEgyQRUzkoRpMG1AM6xZIV0LWCJGbZNtbvG',
+                    'access_token_key': oAuthToken,
+                    'access_token_secret': oAuthTokenSecret
                 });
 
                 twitterStream.stream();
