@@ -4,6 +4,6 @@
     "appPath": "www",
     "dependencies": {
         "jquery": "2.1.1",
-        "oauth-js": "https://github.com/guasek/oauth-js.git"
+        "oauth-js": "https://github.com/guasek/oauth-js.git#master"
     }
 }

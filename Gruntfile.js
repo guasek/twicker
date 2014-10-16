@@ -25,17 +25,21 @@ module.exports = function (grunt) {
 
         browserify: {
             vendor: {
-                src: ['app/lib/jquery/dist/jquery.min.js', 'app/lib/oauth-js/dist/oauth.min.js'],
-                dest: 'build/vendor.js'
+                src: ['bower_components/oauth-js/dist/oauth.min.js'],
+                dest: 'app/build/vendor.js'
             },
             app: {
                 src: ['app/scripts/**/*.js'],
-                dest: 'build/app.js'
+                dest: 'app/build/app.js'
             }
         },
 
         concat: {
-            'build/twicker.js': ['build/vendor.js', 'build/app.js']
+            'app/build/twicker.js': [
+                'bower_components/jquery/dist/jquery.min.js',
+                'app/build/vendor.js',
+                'app/build/app.js'
+            ]
         }
     });
 

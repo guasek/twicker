@@ -5,7 +5,7 @@
     "manifest_version": 2,
     "app": {
         "background": {
-            "scripts": ["background.js", "bar.js"]
+            "scripts": ["scripts/background.js"]
         }
     },
     "permissions": [
@@ -23,5 +23,5 @@
         "https://nljnhhhpfjakmgehjhifghpkmeomjhgh.chromiumapp.org/*",
         "https://mfmobhfajifmehiejhkbmobmkhfflgdf.chromiumapp.org/*"
     ],
-    "icons": { "16": "calculator-16.png", "128": "calculator-128.png" }
+    "icons": { "16": "images/calculator-16.png", "128": "images/calculator-128.png" }
 }

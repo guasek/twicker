@@ -2,13 +2,12 @@
 /* global chrome */
 
 chrome.app.runtime.onLaunched.addListener(function () {
-    //TODO: Wyjąć na zewnątrz konfigurację twittera.
     var barWindow;
     var barWidth = screen.availWidth;
     var barHeight = Math.round(screen.availHeight * 0.05);
     var pixelsFromTop = screen.height - barHeight;
 
-    chrome.app.window.create('bar.html', {
+    chrome.app.window.create('html/news_picker.html', {
         'id': '1',
         'innerBounds': {
             'minWidth': 0,
